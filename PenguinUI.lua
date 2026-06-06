@@ -346,7 +346,7 @@ local libCreateNoti = function(Setting)
     local color = colorR .. ',' .. colorG .. ',' .. colorB
     TextLabelNoti.Text =
         "<font color=\"rgb(" .. tostring(color or "255,206,27") .. ")\">" ..
-            tostring("Bear Hub") .. "</font> " ..
+            tostring("Penguin Hub") .. "</font> " ..
             tostring(getgenv().TitleNameNoti or "")
 
     TextLabelNoti.Name = "TextLabelNoti"
@@ -452,7 +452,7 @@ function Library:Notify(Setting, bypass)
 end
 
 function Library:CreateWindow(Setting)
-    local TitleNameMain = Setting.Title or "Bear Hub"
+    local TitleNameMain = Setting.Title or "Penguin Hub"
     getgenv().MainDesc = Setting.Desc or Setting.Subtitle or ""
 
     if Setting.Image then getgenv().UIColor["Logo Image"] = Setting.Image end
@@ -589,7 +589,7 @@ function Library:CreateWindow(Setting)
     local color = colorR .. ',' .. colorG .. ',' .. colorB
     TextLabelMain.Text =
         "<font color=\"rgb(" .. tostring(color or "255,206,27") .. ")\">" ..
-            tostring(TitleNameMain or "Bear Hub") .. "</font> " ..
+            tostring(TitleNameMain or "Penguin Hub") .. "</font> " ..
             tostring(getgenv().MainDesc or "")
 
     PageControl.Name = "Background1"
