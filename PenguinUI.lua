@@ -11,36 +11,36 @@ local DisableAnimation = game.Players.LocalPlayer.PlayerGui:FindFirstChild(
                              'TouchGui')
 local T1UIColor = {
     ["Border Color"] = Color3.fromRGB(255, 255, 255),
-    ["Click Effect Color"] = Color3.fromRGB(255, 255, 255),
-    ["Setting Icon Color"] = Color3.fromRGB(255, 255, 255),
+    ["Click Effect Color"] = Color3.fromRGB(120, 220, 255),
+    ["Setting Icon Color"] = Color3.fromRGB(120, 220, 255),
     ["Logo Image"] = "rbxassetid://113126081579551",
-    ["Search Icon Color"] = Color3.fromRGB(255, 255, 255),
-    ["Search Icon Highlight Color"] = Color3.fromRGB(255, 255, 255),
-    ["GUI Text Color"] = Color3.fromRGB(255, 255, 255),
-    ["Text Color"] = Color3.fromRGB(255, 255, 255),
-    ["Placeholder Text Color"] = Color3.fromRGB(255, 255, 255),
-    ["Title Text Color"] = Color3.fromRGB(255, 255, 255),
+    ["Search Icon Color"] = Color3.fromRGB(120, 220, 255),
+    ["Search Icon Highlight Color"] = Color3.fromRGB(120, 220, 255),
+    ["GUI Text Color"] = Color3.fromRGB(120, 220, 255),
+    ["Text Color"] = Color3.fromRGB(120, 220, 255),
+    ["Placeholder Text Color"] = Color3.fromRGB(120, 220, 255),
+    ["Title Text Color"] = Color3.fromRGB(120, 220, 255),
     ["Background Main Color"] = Color3.fromRGB(18, 18, 22),
     ["Background 1 Color"] = Color3.fromRGB(28, 28, 34),
     ["Background 1 Transparency"] = 0.1,
     ["Background 2 Color"] = Color3.fromRGB(38, 38, 46),
     ["Background 3 Color"] = Color3.fromRGB(48, 48, 56),
     ["Background Image"] = "",
-    ["Page Selected Color"] = Color3.fromRGB(255, 255, 255),
-    ["Section Text Color"] = Color3.fromRGB(255, 255, 255),
-    ["Section Underline Color"] = Color3.fromRGB(255, 255, 255),
-    ["Toggle Border Color"] = Color3.fromRGB(255, 255, 255),
-    ["Toggle Checked Color"] = Color3.fromRGB(255, 255, 255),
+    ["Page Selected Color"] = Color3.fromRGB(120, 220, 255),
+    ["Section Text Color"] = Color3.fromRGB(120, 220, 255),
+    ["Section Underline Color"] = Color3.fromRGB(120, 220, 255),
+    ["Toggle Border Color"] = Color3.fromRGB(120, 220, 255),
+    ["Toggle Checked Color"] = Color3.fromRGB(120, 220, 255),
     ["Toggle Desc Color"] = Color3.fromRGB(185, 185, 185),
-    ["Button Color"] = Color3.fromRGB(255, 255, 255),
+    ["Button Color"] = Color3.fromRGB(120, 220, 255),
     ["Label Color"] = Color3.fromRGB(38, 38, 42),
-    ["Dropdown Icon Color"] = Color3.fromRGB(255, 255, 255),
-    ["Dropdown Selected Color"] = Color3.fromRGB(255, 255, 255),
-    ["Dropdown Selected Check Color"] = Color3.fromRGB(255, 255, 255),
-    ["Textbox Highlight Color"] = Color3.fromRGB(255, 255, 255),
-    ["Box Highlight Color"] = Color3.fromRGB(255, 255, 255),
-    ["Slider Line Color"] = Color3.fromRGB(255, 255, 255),
-    ["Slider Highlight Color"] = Color3.fromRGB(255, 255, 255),
+    ["Dropdown Icon Color"] = Color3.fromRGB(120, 220, 255),
+    ["Dropdown Selected Color"] = Color3.fromRGB(120, 220, 255),
+    ["Dropdown Selected Check Color"] = Color3.fromRGB(120, 220, 255),
+    ["Textbox Highlight Color"] = Color3.fromRGB(120, 220, 255),
+    ["Box Highlight Color"] = Color3.fromRGB(120, 220, 255),
+    ["Slider Line Color"] = Color3.fromRGB(120, 220, 255),
+    ["Slider Highlight Color"] = Color3.fromRGB(120, 220, 255),
     ["Tween Animation 1 Speed"] = DisableAnimation and 0 or 0.25,
     ["Tween Animation 2 Speed"] = DisableAnimation and 0 or 0.5,
     ["Tween Animation 3 Speed"] = DisableAnimation and 0 or 0.1,
@@ -512,7 +512,7 @@ function Library:CreateWindow(Setting)
 
     local uistr = Instance.new("UIStroke", MainContainer);
     uistr.Thickness = 1;
-    uistr.Color = Color3.fromRGB(255, 255, 255);
+    uistr.Color = Color3.fromRGB(120, 220, 255);
 
     local uigradient = Instance.new("UIGradient", MainContainer);
     uigradient.Color = ColorSequence.new {
@@ -553,7 +553,7 @@ function Library:CreateWindow(Setting)
 
     local TopStroke = Instance.new("Frame", TopMain)
     TopStroke.Name = "TopStroke"
-    TopStroke.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    TopStroke.BackgroundColor3 = Color3.fromRGB(120, 220, 255)
     TopStroke.BackgroundTransparency = 0.6
     TopStroke.BorderSizePixel = 0
     TopStroke.Position = UDim2.new(0, 0, 1, -1)
@@ -600,7 +600,7 @@ function Library:CreateWindow(Setting)
     PageControl.BackgroundTransparency = 0.1
 
     local pageControlStroke = Instance.new("UIStroke", PageControl)
-    pageControlStroke.Color = Color3.fromRGB(255, 255, 255)
+    pageControlStroke.Color = Color3.fromRGB(120, 220, 255)
     pageControlStroke.Thickness = 1
 
     local pageControlGradient = Instance.new("UIGradient", PageControl)
@@ -677,7 +677,7 @@ function Library:CreateWindow(Setting)
     SearchIcon.Position = UDim2.new(0.5, 0, 0.5, 0)
     SearchIcon.Size = UDim2.new(0, 16, 0, 16)
     SearchIcon.Image = "rbxassetid://8154282545"
-    SearchIcon.ImageColor3 = Color3.fromRGB(255, 255, 255)
+    SearchIcon.ImageColor3 = Color3.fromRGB(120, 220, 255)
 
     SearchBox.Name = "SearchBox"
     SearchBox.Parent = PageSearch
@@ -688,10 +688,10 @@ function Library:CreateWindow(Setting)
     SearchBox.Position = UDim2.new(0, 30, 0, 0)
     SearchBox.Size = UDim2.new(1, -30, 1, 0)
     SearchBox.Font = Enum.Font.GothamBold
-    SearchBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+    SearchBox.PlaceholderColor3 = Color3.fromRGB(120, 220, 255)
     SearchBox.PlaceholderText = "Search section or Function..."
     SearchBox.Text = ""
-    SearchBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+    SearchBox.TextColor3 = Color3.fromRGB(120, 220, 255)
     SearchBox.TextSize = 14
     SearchBox.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -1188,7 +1188,7 @@ function Library:CreateWindow(Setting)
             Section.ClipsDescendants = true
 
             local sectionStroke = Instance.new("UIStroke", Section)
-            sectionStroke.Color = Color3.fromRGB(255, 255, 255)
+            sectionStroke.Color = Color3.fromRGB(120, 220, 255)
             sectionStroke.Thickness = 1
 
             local sectionGradient = Instance.new("UIGradient", Section)
@@ -1407,7 +1407,7 @@ function Library:CreateWindow(Setting)
                 check.Name = "check"
                 check.Parent = checkbox
                 check.AnchorPoint = Vector2.new(0.5, 0.5)
-                check.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                check.BackgroundColor3 = Color3.fromRGB(120, 220, 255)
                 check.Position = UDim2.new(0.5, 0, 0.5, 0)
                 local cac = 5
                 if Desc then
@@ -1577,7 +1577,7 @@ function Library:CreateWindow(Setting)
                 ClickArea_1.Name = "ClickArea"
                 ClickArea_1.Parent = RowBG_1
                 ClickArea_1.AnchorPoint = Vector2.new(1, 0.5)
-                ClickArea_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                ClickArea_1.BackgroundColor3 = Color3.fromRGB(120, 220, 255)
                 ClickArea_1.Position = UDim2.new(1, -8, 0.5, 0)
                 ClickArea_1.Size = UDim2.new(0, 94, 0, 30)
                 ClickArea_1.ClipsDescendants = true -- THÊM DÒNG NÀY: Ngăn ripple tràn ra
@@ -1587,10 +1587,10 @@ function Library:CreateWindow(Setting)
 
                 UIGradient_1.Parent = ClickArea_1
                 UIGradient_1.Color = ColorSequence.new {
-                    ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 255, 255)),
-                    ColorSequenceKeypoint.new(0.4, Color3.fromRGB(255, 255, 255)),
-                    ColorSequenceKeypoint.new(0.6, Color3.fromRGB(255, 255, 255)),
-                    ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 255, 255))
+                    ColorSequenceKeypoint.new(0, Color3.fromRGB(120, 220, 255)),
+                    ColorSequenceKeypoint.new(0.4, Color3.fromRGB(120, 220, 255)),
+                    ColorSequenceKeypoint.new(0.6, Color3.fromRGB(120, 220, 255)),
+                    ColorSequenceKeypoint.new(1, Color3.fromRGB(120, 220, 255))
                 }
                 UIGradient_1.Rotation = 90
 
