@@ -14,11 +14,11 @@ local T1UIColor = {
     ["Click Effect Color"] = Color3.fromRGB(120, 220, 255),
     ["Setting Icon Color"] = Color3.fromRGB(120, 220, 255),
     ["Logo Image"] = "rbxassetid://113126081579551",
-    ["Search Icon Color"] = Color3.fromRGB(120, 220, 255),
+    ["Search Icon Color"] = Color3.fromRGB(255, 255, 255),
     ["Search Icon Highlight Color"] = Color3.fromRGB(120, 220, 255),
-    ["GUI Text Color"] = Color3.fromRGB(120, 220, 255),
-    ["Text Color"] = Color3.fromRGB(120, 220, 255),
-    ["Placeholder Text Color"] = Color3.fromRGB(120, 220, 255),
+    ["GUI Text Color"] = Color3.fromRGB(255, 255, 255),
+    ["Text Color"] = Color3.fromRGB(255, 255, 255),
+    ["Placeholder Text Color"] = Color3.fromRGB(255, 255, 255),
     ["Title Text Color"] = Color3.fromRGB(120, 220, 255),
     ["Background Main Color"] = Color3.fromRGB(18, 18, 22),
     ["Background 1 Color"] = Color3.fromRGB(28, 28, 34),
@@ -27,7 +27,7 @@ local T1UIColor = {
     ["Background 3 Color"] = Color3.fromRGB(48, 48, 56),
     ["Background Image"] = "",
     ["Page Selected Color"] = Color3.fromRGB(120, 220, 255),
-    ["Section Text Color"] = Color3.fromRGB(120, 220, 255),
+    ["Section Text Color"] = Color3.fromRGB(255, 255, 255),
     ["Section Underline Color"] = Color3.fromRGB(120, 220, 255),
     ["Toggle Border Color"] = Color3.fromRGB(120, 220, 255),
     ["Toggle Checked Color"] = Color3.fromRGB(120, 220, 255),
@@ -345,10 +345,9 @@ local libCreateNoti = function(Setting)
                                 getgenv().UIColor['Title Text Color'])[3])
     local color = colorR .. ',' .. colorG .. ',' .. colorB
     TextLabelNoti.Text =
-        "<font color=\"rgb(" .. tostring(color or "255,206,27") .. ")\">" ..
+        "<font color=\"rgb(" .. tostring(color or "120, 220, 255") .. ")\">" ..
             tostring("Penguin Hub") .. "</font> " ..
-            tostring(getgenv().TitleNameNoti or "")
-
+            "<font color=\"rgb(255,255,255)\">" .. tostring(getgenv().TitleNameNoti or "") .. "</font>"
     TextLabelNoti.Name = "TextLabelNoti"
     TextLabelNoti.Parent = Topnoti
     TextLabelNoti.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
@@ -512,7 +511,7 @@ function Library:CreateWindow(Setting)
 
     local uistr = Instance.new("UIStroke", MainContainer);
     uistr.Thickness = 1;
-    uistr.Color = Color3.fromRGB(120, 220, 255);
+    uistr.Color = Color3.fromRGB(255, 255, 255);
 
     local uigradient = Instance.new("UIGradient", MainContainer);
     uigradient.Color = ColorSequence.new {
@@ -553,7 +552,7 @@ function Library:CreateWindow(Setting)
 
     local TopStroke = Instance.new("Frame", TopMain)
     TopStroke.Name = "TopStroke"
-    TopStroke.BackgroundColor3 = Color3.fromRGB(120, 220, 255)
+    TopStroke.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     TopStroke.BackgroundTransparency = 0.6
     TopStroke.BorderSizePixel = 0
     TopStroke.Position = UDim2.new(0, 0, 1, -1)
@@ -588,10 +587,11 @@ function Library:CreateWindow(Setting)
                                 getgenv().UIColor['Title Text Color'])[3])
     local color = colorR .. ',' .. colorG .. ',' .. colorB
     TextLabelMain.Text =
-        "<font color=\"rgb(" .. tostring(color or "255,206,27") .. ")\">" ..
-            tostring(TitleNameMain or "Penguin Hub") .. "</font> " ..
-            tostring(getgenv().MainDesc or "")
-
+        "<font color=\"rgb(" .. tostring(color) .. ")\">" ..
+        tostring(TitleNameMain or "Penguin Hub") ..
+        "</font> <font color=\"rgb(255,255,255)\">" ..
+        tostring(getgenv().MainDesc or "") ..
+        "</font>"
     PageControl.Name = "Background1"
     PageControl.Parent = Concacmain
     PageControl.Position = UDim2.new(0, 5, 0, 0)
@@ -600,7 +600,7 @@ function Library:CreateWindow(Setting)
     PageControl.BackgroundTransparency = 0.1
 
     local pageControlStroke = Instance.new("UIStroke", PageControl)
-    pageControlStroke.Color = Color3.fromRGB(120, 220, 255)
+    pageControlStroke.Color = Color3.fromRGB(255,255,255)
     pageControlStroke.Thickness = 1
 
     local pageControlGradient = Instance.new("UIGradient", PageControl)
@@ -677,7 +677,7 @@ function Library:CreateWindow(Setting)
     SearchIcon.Position = UDim2.new(0.5, 0, 0.5, 0)
     SearchIcon.Size = UDim2.new(0, 16, 0, 16)
     SearchIcon.Image = "rbxassetid://8154282545"
-    SearchIcon.ImageColor3 = Color3.fromRGB(120, 220, 255)
+    SearchIcon.ImageColor3 = Color3.fromRGB(255, 255, 255)
 
     SearchBox.Name = "SearchBox"
     SearchBox.Parent = PageSearch
@@ -688,10 +688,10 @@ function Library:CreateWindow(Setting)
     SearchBox.Position = UDim2.new(0, 30, 0, 0)
     SearchBox.Size = UDim2.new(1, -30, 1, 0)
     SearchBox.Font = Enum.Font.GothamBold
-    SearchBox.PlaceholderColor3 = Color3.fromRGB(120, 220, 255)
+    SearchBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
     SearchBox.PlaceholderText = "Search section or Function..."
     SearchBox.Text = ""
-    SearchBox.TextColor3 = Color3.fromRGB(120, 220, 255)
+    SearchBox.TextColor3 = Color3.fromRGB(255, 255, 255)
     SearchBox.TextSize = 14
     SearchBox.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -1188,7 +1188,7 @@ function Library:CreateWindow(Setting)
             Section.ClipsDescendants = true
 
             local sectionStroke = Instance.new("UIStroke", Section)
-            sectionStroke.Color = Color3.fromRGB(120, 220, 255)
+            sectionStroke.Color = Color3.fromRGB(255, 255, 255)
             sectionStroke.Thickness = 1
 
             local sectionGradient = Instance.new("UIGradient", Section)
